@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="PromoltaApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar">
+
+    <div id="load_screen"><div id="loading"></div></div>
+
+<!--     <header>
+      <div ui-view="navigation"></div>
+    </header>
+ -->
+    <main>
+      <div ui-view="content"></div>
+    </main>
+
+    <!-- <div>
+      <div ui-view="footer"></div>
+    </div> -->
+
+
+    <!-- Bootstrap core JavaScript
+    =================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/factories/auth.interceptor.js"></script>
+    <script src="scripts/factories/email_services/email.factory.js"></script>
+    <script src="scripts/services/auth.service.js"></script>
+    <script src="scripts/controllers/signin.controller.js"></script>
+    <script src="scripts/controllers/compose.controller.js"></script>
+    <script src="scripts/controllers/draft.controller.js"></script>
+    <script src="scripts/controllers/draftpage.controller.js"></script>
+    <script src="scripts/controllers/inbox.controller.js"></script>
+    <script src="scripts/controllers/inboxpage.controller.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!-- SignIn Section -->
+
+<section class="container-fluid signin-container">
+  <div class="row">
+    <div class="signin-form-container">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="row">
+          <div ng-show="vm.wrongCredentials" class="alert alert-danger alert-dismissible" role="alert">
+            <button class="close fade in" data-dismiss="alert" aria-label="close">&times;</button>
+            <strong>Oops !!!</strong> {{vm.message}}.
+          </div>
+
+          <form name="vm.signinForm" ng-submit="vm.submitSignInForm()" autocomplete="off" novalidate>
+
+            <!-- Registered Email -->
+            <div class="form-group col-sm-12" ng-class="{'has-error' : vm.signinForm.email.$dirty &&vm.signinForm.email.$invalid , 'has-success' : vm.signinForm.email.$valid}">
+              <label for="email" class="reg-color">Registered Email<a href="#" tooltips tooltip-template="Please enter Email id which you have used to sign up with FreightClue" tooltip-side="right"></a></label>
+              <input type="email" class="form-control" name="email" id="email" ng-model="vm.user.email" value="" ng-required="true" placeholder="ABC@gmail.com" ng-pattern='/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i'>
+              <span style="color:#00b3fe ;" id="email" class="help-block" ng-show="vm.signinForm.email.$dirty &&vm.signinForm.email.$invalid"><b><i>Enter a valid email address</i></b></span>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group col-sm-12" ng-class="{'has-error' : vm.signinForm.password.$dirty && vm.signinForm.password.$invalid, 'has-success' : vm.signinForm.password.$valid}">
+              <label for="password" class="reg-color">
+                Password</span>
+                <a href="#" tooltips tooltip-template="Please type password which you have used with registered email id" tooltip-side="right"></i></a>
+              </label>
+              <input type="password" class="form-control" name="password" id="password" ng-model="vm.user.password" value="" ng-required="true" ng-minlength="6" placeholder="******">
+              <span style="color:#00b3fe ;" id="password" class="help-block" ng-show="vm.signinForm.password.$dirty && vm.signinForm.password.$invalid"><b><i>Password must be 6 characters long</i></b></span>
+            </div>
+            <div class="form-group col-sm-12">
+              <button type="submit" class="btn btn-block btn-success">Sign In</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

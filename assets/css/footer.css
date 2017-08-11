@@ -1,0 +1,19 @@
+.footer
+{
+	background-color: #384452;
+	color:#FFFFFF;
+	position: relative;
+	min-height: 31vh;
+}
+
+#link
+{
+	font-size: 14px;
+	font-color: #FFFFFF !important;
+}
+
+.contact
+{
+	color: #e6e6e6;
+	font-size: 12px;
+}

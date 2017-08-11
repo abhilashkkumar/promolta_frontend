@@ -1,0 +1,14 @@
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>From</th>
+      <th>Subject</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="email in vm.emails" ng-click="vm.draftPage(email)">
+        <td>{{email.from}}</td>
+        <td>{{email.subject}}</td>
+      </tr>
+  </tbody>
+</table>
